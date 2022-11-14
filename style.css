@@ -1,0 +1,179 @@
+/*General Styles*/
+:root{	
+	--dark-green:#1e3d0c;
+	--beige:#FEFAE0;
+	--light-orange:#BC6C25;
+	--white:#f5f5f5;
+	--main-background:#000;
+}
+*{
+	box-sizing:border-box;
+	font-size:16px;
+}
+body{
+	margin:0px;
+	padding:0px;
+	background-color:var(--main-background);
+}
+.row:after{
+	content:"";
+	clear:both;
+}
+[class*="col-"]{
+	float:left;
+}
+.col-1{width:8.33%;}
+.col-2{width:16.66%;}
+.col-3{width:25%;}
+.col-4{width:33.33%;}
+.col-5{width:41.66%;}
+.col-6{width:50%;}
+.col-7{width:58.33%;}
+.col-8{width:66.66%;}
+.col-9{width:75%;}
+.col-10{width:83.33%;}
+.col-11{width:92.66%;}
+.col-12{width:100%;}
+
+#scroll-path{
+	position:fixed;
+	top:15%;
+	right:20px;
+	height:100%;
+}
+			/*****************
+						Top Bar
+			*****************/
+#header{
+	position:fixed;
+	top:0px;
+	z-index:3;
+	padding:6px 0px 6px 10px;
+	font-size:1.5em;
+	background-color:var(--dark-green);
+	color:var(--white);
+	border-bottom:2px solid #000;
+}
+
+.navbar{
+	list-style:none;
+	position:relative;
+	display:inline-flex;
+	gap:-5px;	
+}
+
+.nav-link{
+	margin:1vw;
+	padding:.5em;
+	color:var(--beige);
+	background-color:var(--dark-green);
+	border:2px solid var(--beige);
+	border-radius:5px;
+	cursor:pointer;
+	text-transform:uppercase;
+	transition:all ease-out .5s;
+}
+.active{
+	color:var(--dark-green);
+	background-color:var(--beige);
+}
+.nav-link:hover{
+	color:var(--dark-green);
+	background-color:var(--beige);
+}
+
+			/*****************
+					Top Image
+			*****************/
+section{position:relative;}
+#main-img{
+	padding-top:50px;
+	width:100%;
+	height:80vh;
+	object-fit:cover;
+}
+
+.centered{
+	position:absolute;
+	left:50%;
+	top:30%;
+	transform:translate(-50%,70%);
+	color:var(--white);
+	font-size:3em;
+	text-shadow:0px 0px 8px #000;
+}
+
+			/*****************
+				Content Boxes
+			*****************/
+.grade{
+	height:48vh;
+	background-image:linear-gradient(#454d28 20%,#a89f9f,#bfbaba);
+	border-bottom:1px solid #000;
+}
+
+#content-container{
+	display:flex;
+	justify-content:center;
+	gap:8%
+}
+.content-box{
+	float:left;
+	width:25%;
+	max-width:250px;
+	height:30vh;
+	margin-top:10vh;
+	background-color:var(--white);
+	box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);
+	transition:all ease-out .5s;
+	border-radius:5px;
+	z-index:2;
+}
+
+.content-box:hover{
+	transform:scale(1.05,1.05);
+	cursor:pointer;
+	box-shadow:0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.content-image{
+	width:100%;
+	height:80%;
+	object-fit:cover;
+	border-radius:5px 5px 0px 0px;
+}
+.locations{object-position:10% 100%;}
+.activities{object-position:60% 100%;}
+.gear{object-position:70% 100%;}
+
+.label{
+	font-weight:bold;
+	text-align:center;
+	height:20%;
+	color:var(--light-orange);
+	background-color:var(--white);
+}
+
+
+			/*****************
+			  Parellax Images
+			*****************/
+.parellax{
+	min-height:50vh;
+	background-attachment:fixed;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+.fall{background-image:url("https://img.wallpapic.com/i2771-343-827/medium/forest-nature-old-growth-sunlight-wallpaper.jpg");}
+.autum{background-image:url("https://img.wallpapic.com/i2571-241-825/medium/forest-nature-sunlight-autumn-wallpaper.jpg");}
+.winter{background-image:url("https://img.freepik.com/fotos-premium/bosque-invierno-cubierto-nieve-dia-frio_527900-1617.jpg?w=2000");}
+.spring{background-image:url("https://cdn.wallpapersafari.com/3/25/AdYWLF.jpg");}
+
+			/*****************
+					 Articles
+			*****************/
+.article{
+	padding:6px 10px;
+  background-color:lightgrey;
+}
